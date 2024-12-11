@@ -1,0 +1,24 @@
+{
+    "configurations": [
+      {
+        "name": "Docker: Python - Flask",
+        "type": "docker",
+        "request": "launch",
+        "preLaunchTask": "docker-run: debug",
+        "python": {
+          "pathMappings": [
+            {
+              "localRoot": "${workspaceFolder}",
+              "remoteRoot": "/code"
+            }
+          ],
+          "projectType": "flask"
+        },
+        "dockerServerReadyAction": {
+          "action": "openExternally",
+          "pattern": "Starting development server at (http://localhost:5000)",
+          "uriFormat": "http://localhost:50505"
+        }
+      }
+    ]
+  }
